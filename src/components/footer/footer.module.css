@@ -1,0 +1,16 @@
+footer {
+    padding-top: 25px;
+}
+
+.footer__body {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 2px #4e4e4e;
+}
+
+.footer__text {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1rem;
+}
