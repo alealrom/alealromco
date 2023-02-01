@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Frank Ruhl Libre`],
+        fonts: [`Frank Ruhl Libre`, `Poppins`],
         display: "swap",
       },
     }

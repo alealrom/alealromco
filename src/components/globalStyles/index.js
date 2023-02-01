@@ -6,6 +6,16 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
   }
 
+  h2, h3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-family: 'Poppins', sans-serif;
+  }
+  
   ul {
     display: flex;
     list-style: none;
@@ -14,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: space-between;
     padding: 0;
   }
+
 
   svg {
     fill: ${({ theme }) => theme.svg};

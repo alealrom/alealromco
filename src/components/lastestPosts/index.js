@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as Styles from "./lastestPosts.module.css";
 import CardPost from "../cardPost";
 import {useStaticQuery, graphql } from "gatsby";
 
@@ -13,7 +14,7 @@ const LastestPosts = ({ props, post }) => {
         }
         frontmatter {
           author
-          date(locale: "es", formatString: "DD MMMM YYYY")
+          date(locale: "es", formatString: "MMMM DD, YYYY")
           description
           title
           hero_image_alt
@@ -28,14 +29,15 @@ const LastestPosts = ({ props, post }) => {
   }
   `);
   return (
-    <div>
-      <h3>Último Post</h3>
+    <section>
+      <h3 className={Styles.lastestPosts__title}>Últimos Post</h3>
+      <article>
       {" "}
         {data.allMdx.nodes.map((post) => {
           return <CardPost post={post}></CardPost>
         })}
-      
-    </div>
+      </article>
+    </section>
   );
 };
 
