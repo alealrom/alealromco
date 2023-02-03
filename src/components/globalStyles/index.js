@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  * {
+  body {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
@@ -25,7 +25,6 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-
   svg {
     fill: ${({ theme }) => theme.svg};
   }
@@ -34,7 +33,15 @@ export const GlobalStyles = createGlobalStyle`
     fill: ${({ theme }) => theme.hover};
   }
   
+  a {
+    color: ${({ theme }) => theme.text};
+  }
+
   a:hover {
    color: ${({ theme }) => theme.hover};
+  }
+
+  article {
+    background-color: ${({ theme }) => theme.background};
   }
 `

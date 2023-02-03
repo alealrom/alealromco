@@ -1,45 +1,56 @@
-.card__post {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    gap: 30px;
-    padding-bottom: 30px;
-}
-  
 .card__image {
-    height: 278px;
-    border-radius: 8px;
+    height: 280px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-.post__link {
-    background-color: #D96191;
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: bolder;
-    text-decoration: none;
-    
+.card__box {
+    position: relative;
+    top: -31px;
+    height: 400px;
+    width: 95%;
+    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
 }
 
-.post__link:hover {
-    color: #1C1C1C;
+.card__frontmatter {
+    padding: 30px 30px 10px 30px;
 }
 
-.post__details {
+.card__title {
     display: flex;
+    height: 62px;
+    align-items: center;
 }
 
-.post__detailsDate {
+.card__details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     text-transform: capitalize;
 }
 
-.post__boxButton {
+.card__boxButton {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
 }
 
-.post__button {
+.card__button {
     padding: 15px 30px;
     border-radius: 3px;
     background-color: #D96191;
     border: none;
+}
+
+.card__link {
+    background-color: #D96191;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.card__link:hover {
+    color: #1C1C1C;
 }

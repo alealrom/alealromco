@@ -6,7 +6,7 @@ import {useStaticQuery, graphql } from "gatsby";
 const LastestPosts = ({ props, post }) => {
   const data = useStaticQuery(graphql`
   query MyQuery {
-    allMdx(limit: 2, sort: {tableOfContents: DESC}, filter: {}) {
+    allMdx(limit: 2, sort: {frontmatter: {date: DESC}}, filter: {}) {
       nodes {
         id
         internal {
@@ -31,12 +31,12 @@ const LastestPosts = ({ props, post }) => {
   return (
     <section>
       <h3 className={Styles.lastestPosts__title}>Últimos Post</h3>
-      <article>
+      <section className={Styles.cardPost__box}>
       {" "}
         {data.allMdx.nodes.map((post) => {
-          return <CardPost post={post}></CardPost>
+          return <CardPost className={Styles.background} post={post}></CardPost>
         })}
-      </article>
+      </section>
     </section>
   );
 };
