@@ -3,7 +3,6 @@ import Styled from 'styled-components';
 
 const Wrapper = Styled.div`
  display: relative;
- padding-left: 30px;
 `;
 
 const Button = Styled.button`

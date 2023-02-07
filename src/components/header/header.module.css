@@ -4,15 +4,6 @@ header {
     border-bottom: solid 2px #4e4e4e;
 }
 
-.nav__list {
-    display: flex;
-    list-style: none;
-    align-content: center;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-}
-
 .nav__item {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 1.4rem;
@@ -23,4 +14,10 @@ header {
 
 .nav__links {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav__item {
+      font-size: 1rem;
+    }
 }

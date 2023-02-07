@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styles from "./layout.module.css";
-import Header from "./header";
-import Footer from "./footer";
+import Header from "./header/header";
+import Footer from "./footer/footer";
 
 const Layout = ({ pageTitle, children }) => {
   return (

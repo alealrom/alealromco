@@ -1,3 +1,12 @@
 .nav__icon {
-    padding: 10px 5px 0 5px;
+    padding: 8px 5px 0 0px;
+    height: 28px;
+    width: 28px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav__icon {
+        height: 24px;
+        width: 24px;
+    }
 }

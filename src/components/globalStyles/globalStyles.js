@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.063rem;
   }
   
   ul {

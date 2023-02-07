@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 .card__image {
     height: 280px;
     border-top-left-radius: 8px;
@@ -11,6 +15,10 @@
     height: 400px;
     width: 95%;
     clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+}
+
+.card__box:hover {
+    transform: scale(1.05, 1.05);
 }
 
 .card__frontmatter {

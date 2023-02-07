@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import * as Styles from "./header.module.css";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { lightTheme, darkTheme } from "../theme";
+import { lightTheme, darkTheme } from "../theme/theme";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "../globalStyles";
-import SocialNetworks from "../socialNetworks";
-import Toggle from "../toggle";
+import { GlobalStyles } from "../globalStyles/globalStyles";
+import SocialNetworks from "../socialNetworks/socialNetworks";
+import Toggle from "../toggle/toggle";
 
 const Header = () => {
   const [theme, setTheme] = useState("dark");

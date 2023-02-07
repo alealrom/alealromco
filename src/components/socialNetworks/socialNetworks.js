@@ -12,8 +12,6 @@ const SocialNetworks = () => {
         >
           <svg
             className={Styles.nav__icon}
-            height="28px"
-            width="28px"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +36,6 @@ const SocialNetworks = () => {
         <a target="_blank" rel="noreferrer" href="https://twitter.com/alealrom">
           <svg
             className={Styles.nav__icon}
-            height="28px"
-            width="28px"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"
@@ -64,8 +60,6 @@ const SocialNetworks = () => {
         <a target="_blank" rel="noreferrer" href="https://github.com/alealrom">
           <svg
             className={Styles.nav__icon}
-            height="28px"
-            width="28px"
             version="1.1"
             id="Layer_1"
             xmlns="http://www.w3.org/2000/svg"

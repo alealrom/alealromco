@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as Styles from "./footer.module.css";
-import SocialNetworks from "../socialNetworks";
+import SocialNetworks from "../socialNetworks/socialNetworks";
 
 const Footer = () => {
   return (

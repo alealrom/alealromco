@@ -1,0 +1,45 @@
+.portfolio {
+    height: 370px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    overflow: hidden;
+  }
+
+  .image {
+    height: 370px;
+    position: absolute;
+    top: 0px;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .details {
+    height: 135px;
+    width: 370px;
+    position: absolute;
+    left: -1px;
+    bottom: 0px;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 30px 30px 10px 30px;
+    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .boxLanguages {
+    display: flex;
+    gap: 35px;
+}
+
+.languages {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+  .portfolio:hover .details {
+    height: 55px;
+    padding: 0px 16px;
+    cursor: pointer;
+    padding: 30px 30px 10px 30px;
+  }

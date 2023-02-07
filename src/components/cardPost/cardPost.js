@@ -66,7 +66,7 @@ const CardPost = ({ post }) => {
             </p>
           </div>
           <p>{post.frontmatter.description}</p>
-          <a className={Styles.card__boxButton}>
+          <a className={Styles.card__boxButton} href={`/blog/${post.slug}`}>
             <button className={Styles.card__button} target="_blank">
               <Link className={Styles.card__link} to={`/blog/${post.slug}`}>
                 🡶

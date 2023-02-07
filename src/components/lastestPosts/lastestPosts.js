@@ -1,12 +1,16 @@
 import * as React from "react";
 import * as Styles from "./lastestPosts.module.css";
-import CardPost from "../cardPost";
-import {useStaticQuery, graphql } from "gatsby";
+import CardPost from "../cardPost/cardPost";
+import { useStaticQuery, graphql } from "gatsby";
 
-const LastestPosts = ({ props, post }) => {
+const LastestPosts = ({ post }) => {
   const data = useStaticQuery(graphql`
-  query MyQuery {
-    allMdx(limit: 2, sort: {frontmatter: {date: DESC}}, filter: {}) {
+  query {
+    allMdx(
+      limit: 2
+      sort: {frontmatter: {date: DESC}}
+      filter: {frontmatter: {key: {eq: "blog"}}}
+    ) {
       nodes {
         id
         internal {
@@ -14,7 +18,7 @@ const LastestPosts = ({ props, post }) => {
         }
         frontmatter {
           author
-          date(locale: "es", formatString: "MMMM DD, YYYY")
+          date(locale: "es", formatString: "MMM D, YYYY")
           description
           title
           hero_image_alt
@@ -26,7 +30,7 @@ const LastestPosts = ({ props, post }) => {
         }
       }
     }
-  }
+  }  
   `);
   return (
     <section>
@@ -34,7 +38,7 @@ const LastestPosts = ({ props, post }) => {
       <section className={Styles.cardPost__box}>
       {" "}
         {data.allMdx.nodes.map((post) => {
-          return <CardPost className={Styles.background} post={post}></CardPost>
+          return <CardPost post={post}></CardPost>
         })}
       </section>
     </section>

@@ -1,0 +1,10 @@
+.portfolio__title {
+    font-size: 1.4rem;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    place-items: center;
+    gap: 25px;
+}
