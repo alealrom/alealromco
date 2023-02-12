@@ -34,9 +34,9 @@ const Portfolio = ({ project }) => {
     }
 `);
   return (
-    <section>
-      <h3 className={Styles.portfolio__title}>Proyectos</h3>
-      <section className={Styles.portfolio}>
+    <section className={Styles.portfolio}>
+      <h3 className={Styles.title}>Proyectos</h3>
+      <section className={Styles.portfolioGrid}>
       {" "}
         {data.allMdx.nodes.map((project) => {
           return <CardProject project={project}/>

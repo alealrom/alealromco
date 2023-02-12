@@ -1,8 +1,12 @@
-.portfolio__title {
+.portfolio {
+    border-top: solid 1px #4e4e4e;
+}
+
+.title {
     font-size: 1.4rem;
 }
 
-.portfolio {
+.portfolioGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     place-items: center;

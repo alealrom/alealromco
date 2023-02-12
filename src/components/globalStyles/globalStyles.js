@@ -32,6 +32,7 @@ export const GlobalStyles = createGlobalStyle`
 
   svg:hover {
     fill: ${({ theme }) => theme.hover};
+    transition: 0.4s;
   }
   
   a {
@@ -40,6 +41,8 @@ export const GlobalStyles = createGlobalStyle`
 
   a:hover {
    color: ${({ theme }) => theme.hover};
+   text-decoration: underline;
+   transition: 0.4s;
   }
 
   article {

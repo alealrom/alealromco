@@ -23,30 +23,30 @@ export default ProjectPage;
 
 export const data = graphql`
 query {
-    allMdx(
-        limit: 3
-        sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {key: {eq: "project"}}}
-      ) {
-        nodes {
-          id
-          internal {
-            contentFilePath
-          }
-          frontmatter {
-            project
-            language_one
-            language_three
-            language_two
-            url_live
-            image_alt
-            image {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
+  allMdx(
+    limit: 3
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {key: {eq: "project"}}}
+  ) {
+    nodes {
+      id
+      internal {
+        contentFilePath
+      }
+      frontmatter {
+        project
+        language_one
+        language_three
+        language_two
+        url_live
+        image_alt
+        image {
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
     }
+  }
+}
 `;

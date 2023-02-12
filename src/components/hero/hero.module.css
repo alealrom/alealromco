@@ -1,0 +1,68 @@
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 10% 1fr;
+    grid-template-rows: 450px;
+    place-items: center;
+    border-bottom: 9px solid #D96191;
+    padding-top: 5px;
+    padding-bottom: 6px;
+}
+
+.phrase {
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+}
+
+.author {
+    font-size: 1.5rem;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.author:hover {
+    color: #D96191;
+    transition: 0.5s;
+}
+
+.word {
+    background: linear-gradient(to right, hsl(326 61.2% 61.6%), hsl(325.6,71.8%,83.3%));
+    background-clip:  text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.firstName {
+    translate: 15% 127%;
+    font-size: 2.5rem;
+    color: #D96191;
+} 
+
+.lastName {
+    translate: 80% -59%;
+    font-size: 2.8rem;
+}
+
+.surname {
+    translate: 80% -52%;
+    font-size: 2.8rem;
+    color: #D96191;
+}
+
+.firstName, .lastName, .surname {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    text-transform: uppercase;    
+    margin: 0;
+}
+
+.firstName:hover, .surname:hover {
+    color: #F3B6D9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .phrase, .author {
+        display: none;
+    }
+}
