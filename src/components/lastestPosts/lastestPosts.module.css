@@ -1,8 +1,8 @@
-.lastestPosts__title {
+.lastestPostsTitle {
     font-size: 1.4rem;
 }
 
-.cardPost__box {
+.cardPostBox {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 570px));
     grid-template-rows: 1fr;

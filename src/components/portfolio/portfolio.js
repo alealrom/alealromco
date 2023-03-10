@@ -1,47 +1,43 @@
 import * as React from "react";
 import * as Styles from "./portfolio.module.css";
-import CardProject from "../cardProject/cardProject";
 import { useStaticQuery, graphql } from "gatsby";
+import CardProject from "../cardProject/cardProject";
 
 const Portfolio = ({ project }) => {
   const data = useStaticQuery(graphql`
-  query {
+  query MyQuery {
     allMdx(
-        limit: 3
-        sort: {frontmatter: {date: DESC}}
-        filter: {frontmatter: {key: {eq: "project"}}}
-      ) {
-        nodes {
-          id
-          internal {
-            contentFilePath
-          }
-          frontmatter {
-            project
-            language_one
-            language_three
-            language_two
-            url_live
-            image_alt
-            image {
-              childImageSharp {
-                gatsbyImageData
-              }
+      limit: 3
+      filter: {frontmatter: {key: {eq: "project"}}}
+      sort: {frontmatter: {date: DESC}}
+    ) {
+      nodes {
+        frontmatter {
+          date(formatString: "MMM D, YYYY")
+          image {
+            childImageSharp {
+              gatsbyImageData
             }
           }
+          image_alt
+          language_one
+          language_two
+          language_three
+          project
         }
       }
     }
-`);
+  }
+  `);
   return (
     <section className={Styles.portfolio}>
-      <h3 className={Styles.title}>Proyectos</h3>
-      <section className={Styles.portfolioGrid}>
+      <h3 className={Styles.portfolioTitle}>Proyectos</h3>
+      <span className={Styles.portfolioGrid}>
       {" "}
         {data.allMdx.nodes.map((project) => {
           return <CardProject project={project}/>
         })}
-      </section>
+      </span>
     </section>
   );
 };

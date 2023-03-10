@@ -1,64 +1,65 @@
-a {
-    text-decoration: none;
+.cardImage {
+  height: 280px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
-.card__image {
-    height: 280px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+.cardBox {
+  position: relative;
+  top: -31px;
+  width: 95%;
+  height: 400px;
+  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
 }
 
-.card__box {
-    position: relative;
-    top: -31px;
-    height: 400px;
-    width: 95%;
-    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+.cardBox:hover {
+  transform: scale(1.05, 1.05);
 }
 
-.card__box:hover {
-    transform: scale(1.05, 1.05);
+.cardFrontmatter {
+  padding: 30px 30px 10px 30px;
 }
 
-.card__frontmatter {
-    padding: 30px 30px 10px 30px;
+.cardTitle {
+  display: flex;
+  height: 62px;
+  align-items: center;
 }
 
-.card__title {
-    display: flex;
-    height: 62px;
-    align-items: center;
+.cardDetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
 }
 
-.card__details {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-transform: capitalize;
+.cardText {
+  font-size: 1.1rem;
 }
 
-.card__boxButton {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+.cardBoxButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
 }
 
-.card__button {
-    padding: 15px 30px;
-    border-radius: 3px;
-    background-color: #D96191;
-    border: none;
+.cardButton {
+  padding: 15px 30px;
+  border-radius: 3px;
+  border: none;
+  background-color: #d96191;
 }
 
-.card__link {
-    background-color: #D96191;
-    color: #FFFFFF;
-    font-size: 1rem;
-    font-weight: bolder;
-    text-decoration: none;
+.cardLink {
+  background-color: #d96191;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-decoration: none;
 }
 
-.card__link:hover {
-    color: #1C1C1C;
+.cardLink:hover {
+  color: #1c1c1c;
 }

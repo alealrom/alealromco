@@ -1,9 +1,14 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
+  }
+
+  h1 {
+    font-weight: bolder;
+    font-size: 3.2rem;
   }
 
   h2, h3 {
@@ -14,7 +19,6 @@ export const GlobalStyles = createGlobalStyle`
 
   p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.063rem;
   }
   
   ul {
@@ -37,6 +41,7 @@ export const GlobalStyles = createGlobalStyle`
   
   a {
     color: ${({ theme }) => theme.text};
+    text-decoration: none;
   }
 
   a:hover {
@@ -48,4 +53,10 @@ export const GlobalStyles = createGlobalStyle`
   article {
     background-color: ${({ theme }) => theme.background};
   }
-`
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+`;

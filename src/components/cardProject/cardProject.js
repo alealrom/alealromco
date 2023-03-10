@@ -5,14 +5,13 @@ import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CardProject = ({ project }) => {
   return (
-    <section key={project.id} className={Styles.portfolio}>
+    <section key={project.id} className={Styles.projects}>
       <GatsbyImage
-        className={Styles.image}
+        className={Styles.projectImage}
         image={getImage(project.frontmatter.image)}
         alt={project.frontmatter.image_alt}
       />
-<article className={Styles.details}>
-
+      <article className={Styles.projectDetails}>
         <h2>
           <Link to={project.frontmatter.url_live} target="_blank">
             {project.frontmatter.project}
@@ -53,7 +52,7 @@ const CardProject = ({ project }) => {
             <p>{project.frontmatter.language_three}</p>
           </span>
         </li>
-      </article>   
+      </article>
     </section>
   );
 };

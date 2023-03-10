@@ -1,54 +1,44 @@
-.portfolio {
-    height: 370px;
-    width: 370px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    overflow: hidden;
-  }
+.projects {
+  position: relative;
+  display: flex;
+  width: 370px;
+  height: 370px;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow: hidden;
+}
 
-  .image {
-    height: 370px;
-    position: absolute;
-    top: 0px;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
+.projectImage {
+  position: absolute;
+  top: 0px;
+  height: 370px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
-  .details {
-    height: 135px;
-    width: 370px;
-    position: absolute;
-    left: -1px;
-    bottom: 0px;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    padding: 30px 0px 10px 30px;
-    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
-  }
+.projectDetails {
+  position: absolute;
+  left: -1px;
+  bottom: 0px;
+  height: 135px;
+  width: 370px;
+  padding: 30px 0px 10px 30px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+}
 
-  .icons {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-  }
-
-  .list {
-    text-decoration: none;
-    list-style: none;
-  }
-
-  .boxLanguages {
-    display: flex;
-    gap: 35px;
+.boxLanguages {
+  display: flex;
+  gap: 35px;
+  font-size: 1.1rem;
 }
 
 .languages {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-  .portfolio:hover .details {
-    height: 55px;
-    cursor: pointer;
-  }
+.projects:hover .projectDetails {
+  height: 55px;
+  cursor: pointer;
+}

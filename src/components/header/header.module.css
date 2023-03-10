@@ -4,7 +4,7 @@ header {
     border-bottom: solid 2px #4e4e4e;
 }
 
-.nav__item {
+.navItem {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 1.4rem;
     font-weight: 900;
@@ -12,12 +12,12 @@ header {
     padding-top: 10px;
 }
 
-.nav__links {
+.navLinks {
     text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
-    .nav__item {
+    .navItem {
       font-size: 1rem;
     }
 }

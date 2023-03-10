@@ -1,0 +1,73 @@
+.profile {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profileBox {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: top;
+  gap: 30px;
+  padding: 40px 15px 0 15px;
+}
+
+.profilePic {
+  width: 330px;
+}
+
+.profileName {
+  margin: 0;
+  font-size: 3.5rem;
+  background: linear-gradient(
+    to bottom,
+    hsl(326 61.2% 61.6%),
+    hsl(325.6, 71.8%, 83.3%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profileMail, .profileCV{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.profileTitle {
+  padding-left: 20px;
+  margin-top: 0;
+  border-left: solid 5px #f3b6d9;
+}
+
+.profileText {
+  font-size: 1.25rem;
+  line-height: 2.1rem;
+}
+
+.profileButton {
+    padding: 15px 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: #d96191;
+}
+
+.profileLink {
+  font-size: 1rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #d96191;
+}
+
+.profileLink:hover {
+  color: #1c1c1c;
+}
+
+@media screen and (max-width: 900px) {
+  .profileBox {
+    grid-template-columns: 1fr;
+    place-items: center;
+    text-align: center;
+  }
+}

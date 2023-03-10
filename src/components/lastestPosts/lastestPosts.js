@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styles from "./lastestPosts.module.css";
-import CardPost from "../cardPost/cardPost";
 import { useStaticQuery, graphql } from "gatsby";
+import CardPost from "../cardPost/cardPost";
 
 const LastestPosts = ({ post }) => {
   const data = useStaticQuery(graphql`
@@ -27,6 +27,7 @@ const LastestPosts = ({ post }) => {
               gatsbyImageData
             }
           }
+          slug
         }
       }
     }
@@ -34,13 +35,13 @@ const LastestPosts = ({ post }) => {
   `);
   return (
     <section>
-      <h3 className={Styles.lastestPosts__title}>Últimos Post</h3>
-      <section className={Styles.cardPost__box}>
+      <h3 className={Styles.lastestPostsTitle}>Últimos Post</h3>
+      <span className={Styles.cardPostBox}>
       {" "}
         {data.allMdx.nodes.map((post) => {
           return <CardPost post={post}></CardPost>
         })}
-      </section>
+      </span>
     </section>
   );
 };

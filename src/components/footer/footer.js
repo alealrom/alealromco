@@ -5,8 +5,8 @@ import SocialNetworks from "../socialNetworks/socialNetworks";
 const Footer = () => {
   return (
     <footer>
-      <section className={Styles.footer__body}>
-        <p className={Styles.footer__text}>
+      <section className={Styles.footerBox}>
+        <p className={Styles.footerText}>
           © alealrom |&nbsp;Desarrollado por{" "}
           <a target="_blank" rel="noreferrer" href="https://alealrom.co/">
             Alejandra Álvarez Romero

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as Styles from "./header.module.css";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
@@ -8,9 +8,15 @@ import { GlobalStyles } from "../globalStyles/globalStyles";
 import SocialNetworks from "../socialNetworks/socialNetworks";
 import Toggle from "../toggle/toggle";
 
+function defaultTheme() {
+  const themeSave = window.localStorage.getItem("theme");
+  return themeSave ? themeSave : "light";
+}
 const Header = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(defaultTheme());
+
   const themeMode = theme === "dark" ? darkTheme : lightTheme;
+
   const themeToggle = () => {
     theme === "dark" ? setTheme("light") : setTheme("dark");
   };
@@ -81,6 +87,11 @@ const Header = () => {
         </g>
       </svg>
     );
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
@@ -99,17 +110,17 @@ const Header = () => {
                 />
               </Link>
             </li>
-            <li className={Styles.nav__item}>
-              <Link className={Styles.nav__links} to="/profile">
+            <li className={Styles.navItem}>
+              <Link className={Styles.navLinks} to="/profile">
                 Perfil
               </Link>
             </li>
-            <li className={Styles.nav__item}>
-              <Link className={Styles.nav__links} to="/blog">
+            <li className={Styles.navItem}>
+              <Link className={Styles.navLinks} to="/blog">
                 Blog
               </Link>
             </li>
-            <SocialNetworks/>
+            <SocialNetworks />
             <Toggle theme={themeMode} toggleTheme={themeToggle} icon={icon} />
           </ul>
         </nav>

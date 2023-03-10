@@ -2,25 +2,25 @@ import React from "react";
 import * as Styles from "./rotateText.module.css";
 
 const RotateText = ({ text, children }) => {
-    const lenght = text.length;
-    const deg = 360 / lenght;
+  const lenght = text.length;
+  const deg = 360 / lenght;
   return (
-    <section className={Styles.wrapper}>
-        <span className={Styles.text}>
+    <section className={Styles.wrapperRotateText}>
+      <span className={Styles.rotateText}>
         <p>
-            {text.split("").map((letra, i) => (
-                <span
-                key={i}
-                style={{
-                    transform: `rotate(${deg * i}deg)`,
-                }}
-                >
-                    {letra}
-                </span>
-            ))}
+          {text.split("").map((letra, i) => (
+            <span
+              key={i}
+              style={{
+                transform: `rotate(${deg * i}deg)`,
+              }}
+            >
+              {letra}
+            </span>
+          ))}
         </p>
-        </span>
-        {children}
+      </span>
+      {children}
     </section>
   );
 };

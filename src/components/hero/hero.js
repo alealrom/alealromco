@@ -1,14 +1,19 @@
 import React from "react";
 import * as Styles from "./hero.module.css";
-import ale from "../../images/ale.png"
+import ale from "../../images/ale.png";
 import RotateText from "../rotateText/rotateText";
 
 const Hero = () => {
   return (
     <section className={Styles.hero}>
       <span>
-        <p className={Styles.phrase}>"Son nuestras <span className={Styles.word}>decisiones </span>las que muestran lo que podemos llegar a <span className={Styles.word}>ser</span>, mucho más que nuestras propias <span className={Styles.word}>habilidades.</span>"</p>
-        <p className={Styles.author}>― J. K. Rowling</p>
+        <p className={Styles.phraseHero}>
+          "Son nuestras <span className={Styles.word}>decisiones </span>las que
+          muestran lo que podemos llegar a{" "}
+          <span className={Styles.word}>ser</span>, mucho más que nuestras
+          propias <span className={Styles.word}>habilidades.</span>"
+        </p>
+        <p className={Styles.authorPhrase}>― J. K. Rowling</p>
       </span>
       <span>
         <p className={Styles.firstName}>Alejandra</p>
@@ -19,10 +24,7 @@ const Hero = () => {
       </span>
       <div>
         <RotateText text=". alejandra álvarez romero . alealrom ">
-          <img
-            src={ale}
-            alt= ""
-          />
+          <img src={ale} alt="" />
         </RotateText>
       </div>
     </section>

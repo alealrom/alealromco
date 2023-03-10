@@ -2,7 +2,7 @@ footer {
     padding-top: 25px;
 }
 
-.footer__body {
+.footerBox {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -10,7 +10,7 @@ footer {
     border-top: solid 2px #4e4e4e;
 }
 
-.footer__text {
+.footerText {
     font-family: 'Frank Ruhl Libre', serif;
     font-size: 0.9rem;
 }

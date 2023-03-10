@@ -7,16 +7,20 @@ const CardPost = ({ post }) => {
   return (
     <section key={post.id}>
       <GatsbyImage
-        className={Styles.card__image}
+        className={Styles.cardImage}
         image={getImage(post.frontmatter.hero_image)}
         alt={post.frontmatter.hero_image_alt}
+        objectFit="cover"
+        objectPosition="left center"
       />
-      <article className={Styles.card__box}>
-        <div className={Styles.card__frontmatter}>
-          <h2 className={Styles.card__title}>
-            <Link to={`/blog/${post.slug}`}>{post.frontmatter.title}</Link>
+      <article className={Styles.cardBox}>
+        <article className={Styles.cardFrontmatter}>
+          <h2 className={Styles.cardTitle}>
+            <Link to={`/blog/${post.frontmatter.slug}`}>
+              {post.frontmatter.title}
+            </Link>
           </h2>
-          <div className={Styles.card__details}>
+          <span className={Styles.cardDetails}>
             <svg
               width="24px"
               height="24px"
@@ -42,9 +46,7 @@ const CardPost = ({ post }) => {
                 ></path>{" "}
               </g>
             </svg>
-            <p>
-              {post.frontmatter.date}
-            </p>
+            <p>{post.frontmatter.date}</p>
             <svg
               width="24px"
               height="24px"
@@ -58,22 +60,31 @@ const CardPost = ({ post }) => {
                 stroke-linejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
-                <path d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 C 14.8983 4.0937 4.0937 14.9453 4.0937 28 C 4.0937 41.0781 14.9218 51.9063 27.9999 51.9063 Z M 27.9999 14.5 C 32.4765 14.5 36.0390 18.4375 36.0390 23.1719 C 36.0390 28.2109 32.4999 32.0547 27.9999 32.0078 C 23.4765 31.9609 19.9609 28.2109 19.9609 23.1719 C 19.9140 18.4375 23.4999 14.5 27.9999 14.5 Z M 42.2499 41.8750 L 42.3202 42.1797 C 38.7109 46.0234 33.3671 48.2266 27.9999 48.2266 C 22.6093 48.2266 17.2655 46.0234 13.6562 42.1797 L 13.7265 41.8750 C 15.7655 39.0625 20.7812 35.9922 27.9999 35.9922 C 35.1952 35.9922 40.2343 39.0625 42.2499 41.8750 Z" fill="#D96191"></path>
+                <path
+                  d="M 27.9999 51.9063 C 41.0546 51.9063 51.9063 41.0781 51.9063 28 C 51.9063 14.9453 41.0312 4.0937 27.9765 4.0937 C 14.8983 4.0937 4.0937 14.9453 4.0937 28 C 4.0937 41.0781 14.9218 51.9063 27.9999 51.9063 Z M 27.9999 14.5 C 32.4765 14.5 36.0390 18.4375 36.0390 23.1719 C 36.0390 28.2109 32.4999 32.0547 27.9999 32.0078 C 23.4765 31.9609 19.9609 28.2109 19.9609 23.1719 C 19.9140 18.4375 23.4999 14.5 27.9999 14.5 Z M 42.2499 41.8750 L 42.3202 42.1797 C 38.7109 46.0234 33.3671 48.2266 27.9999 48.2266 C 22.6093 48.2266 17.2655 46.0234 13.6562 42.1797 L 13.7265 41.8750 C 15.7655 39.0625 20.7812 35.9922 27.9999 35.9922 C 35.1952 35.9922 40.2343 39.0625 42.2499 41.8750 Z"
+                  fill="#D96191"
+                ></path>
               </g>
             </svg>
             <p>
               <i>{post.frontmatter.author}</i>
             </p>
-          </div>
-          <p>{post.frontmatter.description}</p>
-          <a className={Styles.card__boxButton} href={`/blog/${post.slug}`}>
-            <button className={Styles.card__button} target="_blank">
-              <Link className={Styles.card__link} to={`/blog/${post.slug}`}>
+          </span>
+          <p className={Styles.cardText}>{post.frontmatter.description}</p>
+          <a
+            className={Styles.cardBoxButton}
+            href={`/blog/${post.frontmatter.slug}`}
+          >
+            <button className={Styles.cardButton} target="_blank">
+              <Link
+                className={Styles.cardLink}
+                to={`/blog/${post.frontmatter.slug}`}
+              >
                 🡶
               </Link>
             </button>
           </a>
-        </div>
+        </article>
       </article>
     </section>
   );

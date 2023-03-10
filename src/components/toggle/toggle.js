@@ -1,5 +1,5 @@
-import React from 'react';
-import Styled from 'styled-components';
+import React from "react";
+import Styled from "styled-components";
 
 const Wrapper = Styled.div`
  display: relative;
@@ -19,12 +19,11 @@ const Button = Styled.button`
 `;
 
 const Toggle = ({ icon, theme, toggleTheme }) => {
-  
- return (
-       <Wrapper>
-         <Button onClick={toggleTheme}>{icon}</Button>
-       </Wrapper>
- )
-}
+  return (
+    <Wrapper>
+      <Button onClick={toggleTheme}>{icon}</Button>
+    </Wrapper>
+  );
+};
 
 export default Toggle;
