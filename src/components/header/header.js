@@ -9,7 +9,7 @@ import SocialNetworks from "../socialNetworks/socialNetworks";
 import Toggle from "../toggle/toggle";
 
 function defaultTheme() {
-  const themeSave = window.localStorage.getItem("theme");
+  const themeSave = typeof window !== 'undefined' ? window.localStorage.getItem("theme") : 'dark';
   return themeSave ? themeSave : "light";
 }
 const Header = () => {
@@ -89,7 +89,7 @@ const Header = () => {
     );
 
   useEffect(() => {
-    window.localStorage.setItem("theme", theme);
+    if (window) window.localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (

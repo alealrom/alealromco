@@ -7,6 +7,10 @@ import Layout from "../../components/layout";
 import ale from "../../images/ale.png";
 
 const BlogPost = ({ data, children }) => {
+  console.log('data', JSON.stringify(data));
+  if (data.mdx === null) {
+    return
+  }
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
