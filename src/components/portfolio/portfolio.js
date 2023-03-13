@@ -24,6 +24,7 @@ const Portfolio = ({ project }) => {
           language_two
           language_three
           project
+          url_repo
         }
       }
     }

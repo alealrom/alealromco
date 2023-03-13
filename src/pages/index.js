@@ -29,7 +29,7 @@ const IndexPage = () => {
             language_one
             language_three
             language_two
-            url_live
+            url_repo
           }
         }
       }

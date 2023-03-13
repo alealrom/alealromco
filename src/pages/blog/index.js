@@ -32,7 +32,7 @@ query {
       }
       frontmatter {
         author
-        date(locale: "es", formatString: "MMM D, YYYY")
+        date(locale: "es", formatString: "MMM DD, YYYY")
         slug
         description
         title

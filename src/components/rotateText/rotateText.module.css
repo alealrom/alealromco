@@ -43,15 +43,31 @@
 
 @media screen and (max-width: 800px) {
   .wrapperRotateText {
-    width: 430px;
-    height: 430px;
-    padding-left: 50px;
+    width: 405px;
+    height: 405px;
+    padding-left: 40px;
   }
 
   .rotateText span {
-    top: 75px;
+    top: 70px;
     left: 56%;
-    transform-origin: 0 141px;
+    transform-origin: 0 135px;
+  }
+}
+
+  @media screen and (max-width: 400px) {
+    .wrapperRotateText {
+      width: 330px;
+      height: 330px;
+      padding-left: 60px;
+    }
+
+    .rotateText span {
+      top: 65px;
+      left: 60%;
+      font-size: 0.625rem;
+      transform-origin: 0 101px;
+    }
   }
 
   @keyframes spin {
@@ -62,4 +78,3 @@
       transform: rotate(0deg);
     }
   }
-}

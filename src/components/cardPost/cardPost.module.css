@@ -53,13 +53,21 @@
 }
 
 .cardLink {
-  background-color: #d96191;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bolder;
+  font-size: 1.1rem;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-decoration: none;
+  color: #ffffff;
+  background-color: #d96191;
 }
 
 .cardLink:hover {
   color: #1c1c1c;
+}
+
+@media only screen and (max-width: 528px) {
+  .cardBox {
+    height: 450px;
+  }
 }

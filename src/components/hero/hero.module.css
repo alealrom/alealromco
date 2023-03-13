@@ -61,8 +61,22 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .phraseHero, .authorPhrase {
         display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .firstName {
+        translate: 40% 127%;
+    } 
+    
+    .lastName {
+        translate: 100% -59%;  
+    }
+    
+    .surname {   
+        translate: 100% -52%;
     }
 }

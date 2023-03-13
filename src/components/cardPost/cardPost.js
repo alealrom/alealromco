@@ -80,7 +80,7 @@ const CardPost = ({ post }) => {
                 className={Styles.cardLink}
                 to={`/blog/${post.frontmatter.slug}`}
               >
-                🡶
+                Leer Más
               </Link>
             </button>
           </a>

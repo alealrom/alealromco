@@ -75,8 +75,10 @@
 }
 
 .buttonLink {
-  font-size: 1rem;
-  font-weight: bolder;
+  font-size: 1.1rem;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-decoration: none;
   color: #ffffff;
   background-color: #d96191;

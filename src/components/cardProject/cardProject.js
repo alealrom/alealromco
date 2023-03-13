@@ -1,6 +1,5 @@
 import * as React from "react";
 import * as Styles from "./cardProject.module.css";
-import { Link } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CardProject = ({ project }) => {
@@ -13,9 +12,9 @@ const CardProject = ({ project }) => {
       />
       <article className={Styles.projectDetails}>
         <h2>
-          <Link to={project.frontmatter.url_live} target="_blank">
+          <a target="_blank" rel="noreferrer" href={project.frontmatter.url_repo}>
             {project.frontmatter.project}
-          </Link>
+          </a>
         </h2>
         <li className={Styles.boxLanguages}>
           <span className={Styles.languages}>

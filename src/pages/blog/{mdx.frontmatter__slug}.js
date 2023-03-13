@@ -70,7 +70,7 @@ const BlogPost = ({ data, children }) => {
         <a target="_blank" href="/blog">
           <button className={Styles.buttonPost} target="_blank">
             <Link className={Styles.buttonLink} to="/blog/">
-              🡰
+            Volver
             </Link>
           </button>
         </a>
